@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Sum of Array</h1>
+    <input type="text" name="" id="" class="value">
+    <input type="button" class="btn" onclick="btn()" value="Calculate">
+    <p class="para"></p>
+    <script>
+        function btn(){
+            let value = document.querySelector(".value").value;
+            let para = document.querySelector(".para");
+            let array = value.split(" ");
+            let sum = 0;
+            array.forEach(element => {
+                let sum =  sum + element;
+            });
+
+            para.innerHTML = "Sum Of Array : " + sum;
+        }
+    </script>
+    
+</body>
+</html>
