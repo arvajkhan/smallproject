@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Odd Number</h1>
+    <input type="text" class="value">
+    <button class="btn" onclick="btn()">Calculate</button>
+    <p class="para"></p>
+    <script>
+        function btn (){
+            let value = document.querySelector(".value").value;
+            let para = document.querySelector(".para")
+            let arr = value.split(" ");
+            let result = [];
+            arr.forEach(element => {
+                let num = Number(element);
+                if(num % 2 === 1){
+                    result.push(num)
+                }
+            });
+            para.innerHTML = "This is ODD Numbers :" + result.join(", ")
+        }
+    </script>
+</body>
+</html>
