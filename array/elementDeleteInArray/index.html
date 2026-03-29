@@ -6,17 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Ascending Order</h1>
     <input type="text" class="value">
-    <button onclick="btn()">Sort</button>
+    <button onclick="btn()">btn</button>
     <p class="para"></p>
     <script>
         function btn(){
             let value = document.querySelector(".value").value;
             let para = document.querySelector(".para");
             let arr = value.split(" ");
-            para.innerHTML = "Ascending Order : " +  arr.sort((a,b) => a + b)
+            let result = [1,2,3,4,5,6,7,8]
+            arr.forEach(element => {
+                let num = Number(element);
+                if(!isNaN(num)){
+                   result = result.filter(item => item !== num);
+                }
+            });
             
+            para.innerHTML = "Delete Array Element" + result
         }
     </script>
 </body>

@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Ascending Order</h1>
+    <h1>Descending Order</h1>
     <input type="text" class="value">
     <button onclick="btn()">Sort</button>
     <p class="para"></p>
@@ -15,7 +15,7 @@
             let value = document.querySelector(".value").value;
             let para = document.querySelector(".para");
             let arr = value.split(" ");
-            para.innerHTML = "Ascending Order : " +  arr.sort((a,b) => a + b)
+            para.innerHTML = "Ascending Order : " +  arr.sort((a,b) => a - b)
             
         }
     </script>
